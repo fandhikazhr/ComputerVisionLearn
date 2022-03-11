@@ -9,7 +9,7 @@ Learn about programming automatic drone
   
   `--home=x,y,0,0` for set home location
   
-  `--speedup 5` for set speed throtle to 5
+  `--speedup 5` for set speed throtle to 5, default speed is 1
   
 
 - Step 2

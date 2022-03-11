@@ -27,7 +27,7 @@ def arm_and_takeoff(aTargetAltitude):
      print "Taking off !"
     vehicle.simple_takeoff(aTargetAltitude) # Take off to target altitude
     
-    While True:
+    while True:
       print "Altitude : ", vehicle.location.global_relative_frame.alt
       if vehicle.location.global_relative_frame.alt>=aTargetAltitude*0.95:
         print "Reached target altitude"

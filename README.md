@@ -7,4 +7,4 @@ Learn about programming automatic drone
   dronekit-sitl copter --home=
   ```
   
-  <p> --home=x,y,0,0 <\p>
+  <p> --home=x,y,0,0 </p>

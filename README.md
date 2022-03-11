@@ -4,10 +4,12 @@ Learn about programming automatic drone
 - Step 1
 
   ```
-  dronekit-sitl copter --home=
+  dronekit-sitl copter
   ```
   
-  <p> --home=x,y,0,0 </p>
+  `--home=x,y,0,0` for set home location
+  `--speedup 5` for set speed throtle to 5
+  
 
 - Step 2
 

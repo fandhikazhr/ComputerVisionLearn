@@ -4,7 +4,7 @@ Learn about programming automatic drone
 - Step 1
 
   ```
-  dronekit-sitl copter
+  dronekit-sitl copter --home=-7.833720493928131,110.38309035134006,0,0
   ```
   
   `--home=x,y,0,0` for set home location

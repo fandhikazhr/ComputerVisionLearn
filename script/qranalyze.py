@@ -22,3 +22,8 @@ while True:
         pts2 = barcode.rect
         cv2.putText(img,myData,(pts2[0],pts2[1]),cv2.FONT_HERSHEY_SIMPLEX,
                     0.9,(80,255,0),3)
+
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    white = cv2.inRange(hsv, lower_white, upper_white)
+    cnts1 = cv2.findContours(white, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    countours1 = imutils.grab_contours(cnts1)

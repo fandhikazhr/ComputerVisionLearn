@@ -44,3 +44,36 @@ while (1):
     mask = cv2.inRange(hsv, lower_white, upper_white)
     cnts = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
+
+    for c in cnts:
+        area = cv2.contourArea(c)
+        if(area>5000):
+            cv2.drawContours (frame, [c], -1, (0,255,0), 3)
+            print ("[INFO], WHITE Detected!")
+
+            M = cv2.moments(c)
+
+            cx = int(M["m10"]/M["m00"])
+            cy = int(M["m01"]/M["m00"])
+            cv2.circle(frame, (cx,cy),7,(255,255,255),-1)
+            cv2.putText(frame, "Centre", (cx-20, cy-20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 1)
+            cv2.putText(frame,"POS X= "+str(cx), (20,29), cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,0,255), 2)
+            cv2.putText(frame,"POS Y= "+str(cy), (20,60), cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,0,255), 2)
+            print("POS X = ", cx,)
+            print("POS Y = ", cy,)
+            
+    for barcode in decode(img):
+        # print(barcode.data)
+        myData = barcode.data.decode('utf-8')
+        print(myData)
+        pts = np.array([barcode.polygon],np.int32)
+        pts = pts.reshape((-1,1,2))
+        cv2.polylines(img,[pts],True,(80,255,0),5)
+        pts2 = barcode.rect
+        cv2.putText(img,myData,(pts2[0],pts2[1]),cv2.FONT_HERSHEY_SIMPLEX,
+                    0.9,(80,255,0),3)
+
+    cv2.imshow('QR Analyze', img)
+    cv2.imshow("frame", frame)
+    cv2.imshow("mask", mask)
+    cv2.waitKey(1)

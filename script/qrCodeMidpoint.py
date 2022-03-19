@@ -77,3 +77,6 @@ while (1):
     cv2.imshow("frame", frame)
     cv2.imshow("mask", mask)
     cv2.waitKey(1)
+
+cap.release()
+cv2.destroyAllWindows()

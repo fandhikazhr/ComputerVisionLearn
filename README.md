@@ -44,6 +44,11 @@ Learn about programming automatic drone
   
   ![Screenshot from 2022-03-23 20-51-38](https://user-images.githubusercontent.com/99522867/159715310-90918e39-be70-4dc0-9936-56e2d47fe3b3.png)
 
+  And you will see drone in armed position
+  
+  ![Screenshot from 2022-03-23 20-54-45](https://user-images.githubusercontent.com/99522867/159715929-40a81bd8-fbac-4df8-b96c-7c8776276862.png)
+
+  
   
   
 # Preview

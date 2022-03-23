@@ -30,10 +30,15 @@ Learn about programming automatic drone
   
   Simulation without python script.
   
-  First open `Action` tab.
+  First open `Actions` tab.
   
   ![Screenshot from 2022-03-23 20-43-33](https://user-images.githubusercontent.com/99522867/159713637-5348b25f-24e9-4b46-842e-ce49c56b5e59.png)
 
+  And then Set Mode to `Stabilize`
+  
+  ![Screenshot from 2022-03-23 20-47-11](https://user-images.githubusercontent.com/99522867/159714362-25c75b76-59c4-4d8b-bce8-59018eece1a7.png)
+
+  
   
 # Preview
 

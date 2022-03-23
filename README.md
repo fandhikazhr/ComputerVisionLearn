@@ -36,9 +36,13 @@ Learn about programming automatic drone
   
   ![Screenshot from 2022-03-23 20-43-33](https://user-images.githubusercontent.com/99522867/159713637-5348b25f-24e9-4b46-842e-ce49c56b5e59.png)
 
-  And then Set Mode to `Stabilize`
+  And then Set Mode to `Stabilize`.
   
   ![Screenshot from 2022-03-23 20-47-11](https://user-images.githubusercontent.com/99522867/159714362-25c75b76-59c4-4d8b-bce8-59018eece1a7.png)
+
+  Click on `Arm/Disarm` button.
+  
+  ![Screenshot from 2022-03-23 20-51-38](https://user-images.githubusercontent.com/99522867/159715310-90918e39-be70-4dc0-9936-56e2d47fe3b3.png)
 
   
   

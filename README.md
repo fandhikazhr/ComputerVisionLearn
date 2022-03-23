@@ -30,6 +30,7 @@ Learn about programming automatic drone
   
   Simulation without python script.
   1. Open Tab Action.
+  
   ![Screenshot from 2022-03-23 20-43-33](https://user-images.githubusercontent.com/99522867/159713637-5348b25f-24e9-4b46-842e-ce49c56b5e59.png)
 
   

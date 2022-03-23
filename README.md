@@ -48,7 +48,10 @@ Learn about programming automatic drone
   
   ![Screenshot from 2022-03-23 20-54-45](https://user-images.githubusercontent.com/99522867/159715929-40a81bd8-fbac-4df8-b96c-7c8776276862.png)
 
+  Right click on the map, and select TakeOff
   
+![Screenshot from 2022-03-23 20-56-42](https://user-images.githubusercontent.com/99522867/159716518-74b83fd3-fde2-4099-b99e-3098d4fe57c2.png)
+
   
   
 # Preview

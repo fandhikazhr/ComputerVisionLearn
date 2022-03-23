@@ -28,6 +28,8 @@ Learn about programming automatic drone
   
 - Step 3
   
+  ![Screenshot (331)](https://user-images.githubusercontent.com/99522867/157839813-b3aafee6-134a-4289-8f95-f01d42cf4c26.png)
+  
   Simulation without python script.
   
   First open `Actions` tab.
@@ -42,5 +44,4 @@ Learn about programming automatic drone
   
 # Preview
 
-![Screenshot (331)](https://user-images.githubusercontent.com/99522867/157839813-b3aafee6-134a-4289-8f95-f01d42cf4c26.png)
 

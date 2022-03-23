@@ -55,8 +55,3 @@ Learn about programming automatic drone
   And enter the flying altitude of the drone, here I enter the number 5.
   
   ![Screenshot from 2022-03-23 21-00-55](https://user-images.githubusercontent.com/99522867/159717099-ae8dd0db-72b8-4738-8c86-eff0214df5f5.png)
-
-  
-# Preview
-
-

@@ -19,3 +19,19 @@ while True:
         cv2.polylines(img,[pts],True,(80,255,0),5)
         pts2 = barcode.rect
         detect = True
+        if detect == True:
+            hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+            white = cv2.inRange(hsv, lower_white, upper_white)
+            cnts1 = cv2.findContours(white, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+            countours1 = imutils.grab_contours(cnts1)
+            
+            for whiteCountour in countours1:
+                area = cv2.contourArea(whiteCountour)
+                if (area > 5000):
+                    M = cv2.moments(whiteCountour)
+                    cx = int(M["m10"] / M["m00"])
+                    cy = int(M["m01"] / M["m00"])
+                    print(M)
+                    cv2.circle(img, (cx, cy), 7, (0, 0, 255), -1)
+                    
+                    

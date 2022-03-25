@@ -37,3 +37,9 @@ while True:
             cv2.imshow('white', white)
         cv2.putText(img,myData,(pts2[0],pts2[1]),cv2.FONT_HERSHEY_SIMPLEX,
                     0.9,(80,255,0),3)
+        
+    cv2.imshow('Output', img)
+    cv2.waitKey(1)
+
+cap.release()
+cv2.destroyAllWindows()

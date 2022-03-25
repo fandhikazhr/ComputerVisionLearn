@@ -34,4 +34,6 @@ while True:
                     print(M)
                     cv2.circle(img, (cx, cy), 7, (0, 0, 255), -1)
                     
-                    
+            cv2.imshow('white', white)
+        cv2.putText(img,myData,(pts2[0],pts2[1]),cv2.FONT_HERSHEY_SIMPLEX,
+                    0.9,(80,255,0),3)

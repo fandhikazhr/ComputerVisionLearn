@@ -36,3 +36,7 @@ while (1):
         lower_red = np.array([0, 70, 50], np.uint8)
         upper_red = np.array([10, 255, 255], np.uint8)
         red = cv2.inRange(hsv, lower_red, upper_red)
+
+    mask = cv2.inRange(hsv, lower_red, upper_red)
+    cnts = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    cnts = imutils.grab_contours(cnts)

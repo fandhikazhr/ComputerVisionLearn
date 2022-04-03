@@ -58,3 +58,13 @@ while (1):
             print("POS X = ", cx,)
             print("POS Y = ", cy,)
     ims= cv2.resize(mask, (640,360))
+
+    cv2.imshow("frame", frame)
+    cv2.imshow("mask", ims)
+
+    key = cv2.waitKey(1)
+    if key == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()

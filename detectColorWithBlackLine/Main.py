@@ -29,3 +29,17 @@ while True:
             cy = int(M["m01"] / M["m00"])
             print(M)
             cv2.circle(frame, (cx, cy), 7, (255, 255, 255), -1)
+
+    green = cv2.inRange(hsv, lower_green, upper_green)
+    cnts2 = cv2.findContours(green, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    countours2 = imutils.grab_contours(cnts2)
+
+    for greenCountour in countours2:
+        area = cv2.contourArea(greenCountour)
+        if (area > 5000):
+            cv2.drawContours(frame, [greenCountour], -1, (0, 255, 0), 3)
+            M = cv2.moments(greenCountour)
+            cx = int(M["m10"] / M["m00"])
+            cy = int(M["m01"] / M["m00"])
+            cv2.circle(frame, (cx, cy), 7, (255, 255, 255), -1)
+            

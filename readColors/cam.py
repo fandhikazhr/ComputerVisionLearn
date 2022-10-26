@@ -35,3 +35,26 @@ def stackImages(scale, imgArray):
 
 def nothing(x):
     pass
+
+cap = cv2.VideoCapture(0)
+
+settinghsv=True
+settinghsv2=True
+
+if settinghsv:
+    cv2.namedWindow("Line Tracking")
+    cv2.createTrackbar("LH", "Line Tracking", 0, 255, nothing)
+    cv2.createTrackbar("LS", "Line Tracking", 0, 255, nothing)
+    cv2.createTrackbar("LV", "Line Tracking", 205, 255, nothing)
+    cv2.createTrackbar("UH", "Line Tracking", 179, 255, nothing)
+    cv2.createTrackbar("US", "Line Tracking", 255, 255, nothing)
+    cv2.createTrackbar("UV", "Line Tracking", 255, 255, nothing)
+
+if settinghsv2:
+    cv2.namedWindow("Red Gate")
+    cv2.createTrackbar("LH", "Red Gate", 0, 255, nothing)
+    cv2.createTrackbar("LS", "Red Gate", 70, 255, nothing)
+    cv2.createTrackbar("LV", "Red Gate", 50, 255, nothing)
+    cv2.createTrackbar("UH", "Red Gate", 10, 255, nothing)
+    cv2.createTrackbar("US", "Red Gate", 255, 255, nothing)
+    cv2.createTrackbar("UV", "Red Gate", 255, 255, nothing)

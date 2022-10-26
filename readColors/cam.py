@@ -91,4 +91,53 @@ while (1):
         lower_red = np.array([l_h, l_s, l_v])
         upper_red = np.array([u_h, u_s, u_v])
         
-        
+    mask = cv2.inRange(hsv, lower_white, upper_white)
+    cnts = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    cnts = imutils.grab_contours(cnts)
+
+    for b in cnts:
+        area = cv2.contourArea(b)
+        if(area>5000):
+            cv2.drawContours (frame, [b], -1, (0,255,0), 3)
+            print ("[INFO], WHITE Detected!")
+
+            M = cv2.moments(b)
+
+            cx = int(M["m10"]/M["m00"])
+            cy = int(M["m01"]/M["m00"])
+            cv2.circle(frame, (cx,cy),7,(255,255,255),-1)
+            # cv2.putText(frame, "Centre", (cx-20, cy-20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 1)
+            # cv2.putText(frame,"POS X= "+str(cx), (20,29), cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,0,255), 2)
+            # cv2.putText(frame,"POS Y= "+str(cy), (20,60), cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,0,255), 2)
+            # print("POS X = ", cx,)
+            # print("POS Y = ", cy,)
+
+    mask2 = cv2.inRange(hsv2, lower_red, upper_red)
+    cnts2 = cv2.findContours(mask2, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    cnts2 = imutils.grab_contours(cnts2)
+
+    for c in cnts2:
+        area = cv2.contourArea(c)
+        if(area>5000):
+            cv2.drawContours (frame2, [c], -1, (0,255,0), 3)
+            # print ("[INFO], Red Detected!")
+
+            M = cv2.moments(c)
+
+            cx = int(M["m10"]/M["m00"])
+            cy = int(M["m01"]/M["m00"])
+            cv2.circle(frame2, (cx,cy),7,(255,255,255),-1)
+            # cv2.putText(frame2, "Centre", (cx-20, cy-20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 1)
+            # cv2.putText(frame2,"POS X= "+str(cx), (20,29), cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,0,255), 2)
+            # cv2.putText(frame2,"POS Y= "+str(cy), (20,60), cv2.FONT_HERSHEY_SIMPLEX,1.0,(0,0,255), 2)
+            # print("POS X = ", cx,)
+            # print("POS Y = ", cy,)
+
+    imgResult = stackImages(0.6,([frame,mask])) 
+    cv2.imshow("Results", imgResult)
+    key = cv2.waitKey(1)
+    if key == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()

@@ -58,3 +58,37 @@ if settinghsv2:
     cv2.createTrackbar("UH", "Red Gate", 10, 255, nothing)
     cv2.createTrackbar("US", "Red Gate", 255, 255, nothing)
     cv2.createTrackbar("UV", "Red Gate", 255, 255, nothing)
+
+while (1):
+    
+    _, frame = cap.read()
+    _, frame2 = cap.read()
+
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    hsv2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2HSV)
+
+    if settinghsv:
+        l_h = cv2.getTrackbarPos("LH", "Line Tracking")
+        l_s = cv2.getTrackbarPos("LS", "Line Tracking")
+        l_v = cv2.getTrackbarPos("LV", "Line Tracking")
+
+        u_h = cv2.getTrackbarPos("UH", "Line Tracking")
+        u_s = cv2.getTrackbarPos("US", "Line Tracking")
+        u_v = cv2.getTrackbarPos("UV", "Line Tracking")
+
+        lower_white = np.array([l_h, l_s, l_v])
+        upper_white = np.array([u_h, u_s, u_v])
+
+    if settinghsv2:
+        l_h = cv2.getTrackbarPos("LH", "Red Gate")
+        l_s = cv2.getTrackbarPos("LS", "Red Gate")
+        l_v = cv2.getTrackbarPos("LV", "Red Gate")
+
+        u_h = cv2.getTrackbarPos("UH", "Red Gate")
+        u_s = cv2.getTrackbarPos("US", "Red Gate")
+        u_v = cv2.getTrackbarPos("UV", "Red Gate")
+
+        lower_red = np.array([l_h, l_s, l_v])
+        upper_red = np.array([u_h, u_s, u_v])
+        
+        
